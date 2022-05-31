@@ -1,0 +1,813 @@
+{
+	"info": {
+		"_postman_id": "b256a141-def1-44d1-9bb5-772e0b9259d1",
+		"name": "01-no-params",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3106656"
+	},
+	"item": [
+		{
+			"name": "test.fhir.org",
+			"item": [
+				{
+					"name": "root GET",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://test.fhir.org/r4",
+							"protocol": "http",
+							"host": [
+								"test",
+								"fhir",
+								"org"
+							],
+							"path": [
+								"r4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patient GET",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://test.fhir.org/r4/Patient",
+							"protocol": "http",
+							"host": [
+								"test",
+								"fhir",
+								"org"
+							],
+							"path": [
+								"r4",
+								"Patient"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patient compartment GET",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://test.fhir.org/r4/Patient/03bcacbe-f136-4994-b8b8-ad78d8da78",
+							"protocol": "http",
+							"host": [
+								"test",
+								"fhir",
+								"org"
+							],
+							"path": [
+								"r4",
+								"Patient",
+								"03bcacbe-f136-4994-b8b8-ad78d8da78"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "root POST",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://test.fhir.org/r4/_search",
+							"protocol": "http",
+							"host": [
+								"test",
+								"fhir",
+								"org"
+							],
+							"path": [
+								"r4",
+								"_search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patient POST",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://test.fhir.org/r4/Patient/_search",
+							"protocol": "http",
+							"host": [
+								"test",
+								"fhir",
+								"org"
+							],
+							"path": [
+								"r4",
+								"Patient",
+								"_search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patient compartment POST",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://test.fhir.org/r4/Patient/03bcacbe-f136-4994-b8b8-ad78d8da78/_search",
+							"protocol": "http",
+							"host": [
+								"test",
+								"fhir",
+								"org"
+							],
+							"path": [
+								"r4",
+								"Patient",
+								"03bcacbe-f136-4994-b8b8-ad78d8da78",
+								"_search"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "hapi.fhir.org",
+			"item": [
+				{
+					"name": "root GET",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://hapi.fhir.org/baseR4",
+							"protocol": "http",
+							"host": [
+								"hapi",
+								"fhir",
+								"org"
+							],
+							"path": [
+								"baseR4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patient GET",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://hapi.fhir.org/baseR4/Patient",
+							"protocol": "http",
+							"host": [
+								"hapi",
+								"fhir",
+								"org"
+							],
+							"path": [
+								"baseR4",
+								"Patient"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patient compartment GET",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://hapi.fhir.org/baseR4/Patient/1215581",
+							"protocol": "http",
+							"host": [
+								"hapi",
+								"fhir",
+								"org"
+							],
+							"path": [
+								"baseR4",
+								"Patient",
+								"1215581"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "root POST",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://hapi.fhir.org/baseR4/_search",
+							"protocol": "http",
+							"host": [
+								"hapi",
+								"fhir",
+								"org"
+							],
+							"path": [
+								"baseR4",
+								"_search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patient POST",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://hapi.fhir.org/baseR4/Patient/_search",
+							"protocol": "http",
+							"host": [
+								"hapi",
+								"fhir",
+								"org"
+							],
+							"path": [
+								"baseR4",
+								"Patient",
+								"_search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patient compartment POST",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://hapi.fhir.org/baseR4/Patient/1215581/_search",
+							"protocol": "http",
+							"host": [
+								"hapi",
+								"fhir",
+								"org"
+							],
+							"path": [
+								"baseR4",
+								"Patient",
+								"1215581",
+								"_search"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "server.fire.ly",
+			"item": [
+				{
+					"name": "root GET",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://server.fire.ly/r4",
+							"protocol": "https",
+							"host": [
+								"server",
+								"fire",
+								"ly"
+							],
+							"path": [
+								"r4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patient GET",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://server.fire.ly/r4/Patient",
+							"protocol": "https",
+							"host": [
+								"server",
+								"fire",
+								"ly"
+							],
+							"path": [
+								"r4",
+								"Patient"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patient compartment GET",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://server.fire.ly/r4/Patient/a9332dce-4484-4f7c-a9bb-4e6e72d68045",
+							"protocol": "https",
+							"host": [
+								"server",
+								"fire",
+								"ly"
+							],
+							"path": [
+								"r4",
+								"Patient",
+								"a9332dce-4484-4f7c-a9bb-4e6e72d68045"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "root POST",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "https://server.fire.ly/r4/_search",
+							"protocol": "https",
+							"host": [
+								"server",
+								"fire",
+								"ly"
+							],
+							"path": [
+								"r4",
+								"_search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patient POST",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "https://server.fire.ly/r4/Patient/_search",
+							"protocol": "https",
+							"host": [
+								"server",
+								"fire",
+								"ly"
+							],
+							"path": [
+								"r4",
+								"Patient",
+								"_search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patient compartment POST",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "https://server.fire.ly/r4/Patient/a9332dce-4484-4f7c-a9bb-4e6e72d68045/_search",
+							"protocol": "https",
+							"host": [
+								"server",
+								"fire",
+								"ly"
+							],
+							"path": [
+								"r4",
+								"Patient",
+								"a9332dce-4484-4f7c-a9bb-4e6e72d68045",
+								"_search"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "server.subscriptions.argo.run",
+			"item": [
+				{
+					"name": "root GET",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://server.subscriptions.argo.run/r4",
+							"protocol": "http",
+							"host": [
+								"server",
+								"subscriptions",
+								"argo",
+								"run"
+							],
+							"path": [
+								"r4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patient GET",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://server.subscriptions.argo.run/r4/Patient",
+							"protocol": "http",
+							"host": [
+								"server",
+								"subscriptions",
+								"argo",
+								"run"
+							],
+							"path": [
+								"r4",
+								"Patient"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patient compartment GET",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://server.subscriptions.argo.run/r4/Patient/RSN8019",
+							"protocol": "http",
+							"host": [
+								"server",
+								"subscriptions",
+								"argo",
+								"run"
+							],
+							"path": [
+								"r4",
+								"Patient",
+								"RSN8019"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "root POST",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://server.subscriptions.argo.run/r4/_search",
+							"protocol": "http",
+							"host": [
+								"server",
+								"subscriptions",
+								"argo",
+								"run"
+							],
+							"path": [
+								"r4",
+								"_search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patient POST",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://server.subscriptions.argo.run/r4/Patient/_search",
+							"protocol": "http",
+							"host": [
+								"server",
+								"subscriptions",
+								"argo",
+								"run"
+							],
+							"path": [
+								"r4",
+								"Patient",
+								"_search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patient compartment POST",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://server.subscriptions.argo.run/r4/Patient/RSN8019/_search",
+							"protocol": "http",
+							"host": [
+								"server",
+								"subscriptions",
+								"argo",
+								"run"
+							],
+							"path": [
+								"r4",
+								"Patient",
+								"RSN8019",
+								"_search"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

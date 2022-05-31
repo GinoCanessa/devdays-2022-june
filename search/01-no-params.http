@@ -1,0 +1,59 @@
+// Server Base URLs
+@baseUrlTFO = http://test.fhir.org/r4
+@baseUrlHapi = http://hapi.fhir.org/baseR4
+@baseUrlFirely = https://server.fire.ly/r4
+@baseUrlArgo = http://server.subscriptions.argo.run/r4
+
+// choose the base URL to use
+@baseUrl = {{baseUrlHapi}}
+
+// set a resource name
+@resourceName = Patient
+
+// use an ID valid for that resource type on that server
+@compartmentIdTFO = 03bcacbe-f136-4994-b8b8-ad78d8da78
+@compartmentIdHapi = 1215581
+@compartmentIdFirely = a9332dce-4484-4f7c-a9bb-4e6e72d68045
+@compartmentIdArgo = RSN8019
+
+// choose the matching compartment ID
+@compartmentId = {{compartmentIdArgo}}
+
+### Root Server Search - GET
+@name = RootServerGet
+
+GET {{baseUrl}}
+Accept: application/fhir+json
+
+### Root Server Search - POST
+
+@name = RootServerPost
+POST {{baseUrl}}/_search
+Accept: application/fhir+json
+Content-Type: application/x-www-form-urlencoded
+
+### Resource Search - GET
+@name = ResourceGet
+GET {{baseUrl}}/{{resourceName}}
+Accept: application/fhir+json
+
+### Resource Search - POST
+
+@name = ResourcePost
+POST {{baseUrl}}/{{resourceName}}/_search
+Accept: application/fhir+json
+Content-Type: application/x-www-form-urlencoded
+
+
+### Compartment Search - GET
+@name = CompartmentGet
+GET {{baseUrl}}/{{resourceName}}/{{compartmentId}}
+Accept: application/fhir+json
+
+### Compartment Search - POST
+
+@name = CompartmentPost
+POST {{baseUrl}}/{{resourceName}}/{{compartmentId}}/_search
+Accept: application/fhir+json
+Content-Type: application/x-www-form-urlencoded
+
