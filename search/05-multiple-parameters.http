@@ -1,0 +1,40 @@
+// Base URLs
+@baseUrlTFO = http://test.fhir.org/r4
+@baseUrlHapi = http://hapi.fhir.org/baseR4
+@baseUrlFirely = https://server.fire.ly/r4
+@baseUrlArgo = http://server.subscriptions.argo.run/r4
+
+// Family: Project-1537, Given: Argonaut-7461
+
+### AND search: Join two different parameters
+GET {{baseUrlArgo}}/Patient?family=project&given=argonaut-7461
+Accept: application/fhir+json
+
+### AND search: Join two different parameters, with modifiers
+GET {{baseUrlArgo}}/Patient?family=project&given:contains=7461
+Accept: application/fhir+json
+
+### OR search: Join two values 
+GET {{baseUrlArgo}}/Patient?family=project-2655,project-1537
+Accept: application/fhir+json
+
+### OR search: Join two values, with modifiers
+GET {{baseUrlArgo}}/Patient?family:exact=Project-2655,Project-1537
+Accept: application/fhir+json
+
+### Special Case: Composite Search on Name (family portion)
+GET {{baseUrlArgo}}/Patient?name=project-1537
+Accept: application/fhir+json
+
+### Special Case: Composite Search on Name (given portion)
+GET {{baseUrlArgo}}/Patient?name=argonaut-7461
+Accept: application/fhir+json
+
+### Special Case: Composite Search on Name with OR values
+GET {{baseUrlArgo}}/Patient?name=project-2556,argonaut-7461
+Accept: application/fhir+json
+
+### Special Case: Composite Search on Name with OR values and Modifiers
+GET {{baseUrlArgo}}/Patient?name:contains=1537,2556
+Accept: application/fhir+json
+

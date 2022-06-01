@@ -5,7 +5,7 @@
 @baseUrlArgo = http://server.subscriptions.argo.run/r4
 
 // choose the base URL to use
-@baseUrl = {{baseUrlHapi}}
+@baseUrl = {{baseUrlArgo}}
 
 // set a resource name
 @resourceName = Patient

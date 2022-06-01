@@ -1,0 +1,30 @@
+// Base URLs
+@baseUrlTFO = http://test.fhir.org/r4
+@baseUrlHapi = http://hapi.fhir.org/baseR4
+@baseUrlFirely = https://server.fire.ly/r4
+@baseUrlArgo = http://server.subscriptions.argo.run/r4
+
+// use an ID valid for that resource type on that server
+@patientIdTFO = 03bcacbe-f136-4994-b8b8-ad78d8da78
+@patientIdHapi = 1215581
+@patientIdFirely = a9332dce-4484-4f7c-a9bb-4e6e72d68045
+@patientIdArgo = dd
+
+
+### Global Search Parameter - _id - GET
+@name = SearchById
+GET {{baseUrlArgo}}/Patient?_id={{patientIdHapi}}
+Accept: application/fhir+json
+
+
+### Resource Search Parameter - Patient:family - GET
+@name = SearchByPatientFamily
+GET {{baseUrlArgo}}/Patient?family=project
+Accept: application/fhir+json
+
+
+### Search Result Parameter - _sort - GET
+@name = SearchByPatientSortFamily
+GET {{{{baseUrlArgo}}}}?_sort=family
+Accept: application/fhir+json
+

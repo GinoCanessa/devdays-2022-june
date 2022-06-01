@@ -1,0 +1,32 @@
+// Base URLs
+@baseUrlTFO = http://test.fhir.org/r4
+@baseUrlHapi = http://hapi.fhir.org/baseR4
+@baseUrlFirely = https://server.fire.ly/r4
+@baseUrlArgo = http://server.subscriptions.argo.run/r4
+
+@patientIdArgo = CBZ8032
+@encounterIdArgo = 26
+
+
+### Chain: Search for Encounters that reference a patient
+### with a name
+GET {{baseUrlArgo}}/Encounter?subject.name=Project-4142
+Accept: application/fhir+json
+
+### Reverse Chain: Search for Patients that have an Encounter,
+### that references it via a `patient` search parameter 
+### and have a specific id
+GET {{baseUrlArgo}}/Patient?_has:Encounter:patient:_id={{encounterIdArgo}}
+Accept: application/fhir+json
+
+
+### Include: search an encounter by ID and include the relevant patient
+### linked via the Encounter.patient search parameter
+GET {{baseUrlArgo}}/Encounter?_id={{encounterIdArgo}}&_include=Encounter:patient
+Accept: application/fhir+json
+
+### Reverse Include: search a patient by ID and include all encounters
+### linked via the Encounter.subject search parameter
+GET {{baseUrlArgo}}/Patient?_id={{patientIdArgo}}&_revinclude=Encounter:subject
+Accept: application/fhir+json
+

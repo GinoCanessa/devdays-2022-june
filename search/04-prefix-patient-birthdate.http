@@ -1,0 +1,38 @@
+// Base URLs
+@baseUrlTFO = http://test.fhir.org/r4
+@baseUrlHapi = http://hapi.fhir.org/baseR4
+@baseUrlFirely = https://server.fire.ly/r4
+@baseUrlArgo = http://server.subscriptions.argo.run/r4
+
+
+### Default Date handling: defaults to equality
+GET {{baseUrlArgo}}/Patient?birthdate=1913-09-24
+Accept: application/fhir+json
+
+### Explicit Equality Test: eq
+GET {{baseUrlArgo}}/Patient?birthdate=eq1913-09-24
+Accept: application/fhir+json
+
+### Not-equal: ne - prefix not supported
+GET {{baseUrlArgo}}/Patient?birthdate=ne1913-09-24
+Accept: application/fhir+json
+
+### Not providing one that supports it, the query is expensive
+
+### Greater Than: gt
+GET {{baseUrlArgo}}/Patient?birthdate=gt1913-09-24
+Accept: application/fhir+json
+
+### Greater Than or Equal To: ge (more results)
+GET {{baseUrlArgo}}/Patient?birthdate=ge1913-09-24
+Accept: application/fhir+json
+
+### Less Than: lt
+GET {{baseUrlArgo}}/Patient?birthdate=lt1913-09-24
+Accept: application/fhir+json
+
+### Less Than or Equal To: le (more results)
+GET {{baseUrlArgo}}/Patient?birthdate=le1913-09-24
+Accept: application/fhir+json
+
+// ...
