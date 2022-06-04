@@ -10,12 +10,26 @@
 GET {{baseUrl}}/Patient?_id={{patientId}}
 Accept: application/fhir+json
 
+### Comparison - Read with id
+@name = ReadById
+GET {{baseUrl}}/Patient/{{patientId}}
+Accept: application/fhir+json
+
+
 
 ### Resource Search Parameter - Patient:family - GET
 @name = SearchByPatientFamily
 GET {{baseUrl}}/Patient?family=Abernathy524
 Accept: application/fhir+json
 
+
+### Resource Search Parameter - Patient:family - POST
+@name = SearchByPatientFamilyPost
+GET {{baseUrl}}/Patient
+Accept: application/fhir+json
+Content-Type: application/x-www-form-urlencoded
+
+family=Abernathy524
 
 ### Search Result Parameter - _sort - GET
 @name = SearchByPatientSortFamily
