@@ -1,40 +1,32 @@
 // Base URLs
-@baseUrlTFO = http://test.fhir.org/r4
-@baseUrlHapi = http://hapi.fhir.org/baseR4
-@baseUrlFirely = https://server.fire.ly/r4
-@baseUrlArgo = http://server.subscriptions.argo.run/r4
+@baseUrl = https://fhirdemo5.azurewebsites.net
 
 
-### Missing - modifier not supported
-GET {{baseUrlArgo}}/Patient?family:missing=true
+### Missing - patients without a family name
+GET {{baseUrl}}/Patient?family:missing=true
 Accept: application/fhir+json
 
-
-### Missing
-GET {{baseUrlFirely}}/Patient?family:missing=true
-Accept: application/fhir+json
-
-// looking at family name of Project-1537
+// looking at family name of Abernathy524
 
 ### Default Text handling: starts with or equals, case-insensitive
-GET {{baseUrlArgo}}/Patient?family=project
+GET {{baseUrl}}/Patient?family=Abernathy
 Accept: application/fhir+json
 
 ### Default Text handling: starts with or equals, case-insensitive
-GET {{baseUrlArgo}}/Patient?family=1537
+GET {{baseUrl}}/Patient?family=524
 Accept: application/fhir+json
 
 
 ### Contains: contains text, case-insensitive
-GET {{baseUrlArgo}}/Patient?family:contains=1537
+GET {{baseUrl}}/Patient?family:contains=524
 Accept: application/fhir+json
 
 ### Exact: exact match text, case-sensitive
-GET {{baseUrlArgo}}/Patient?family:exact=project-1537
+GET {{baseUrl}}/Patient?family:exact=abernathy524
 Accept: application/fhir+json
 
 ### Exact: exact match text, case-sensitive
-GET {{baseUrlArgo}}/Patient?family:exact=Project-1537
+GET {{baseUrl}}/Patient?family:exact=Abernathy524
 Accept: application/fhir+json
 
 ### Text: advanced text searching (e.g., regex, lucene, etc.)

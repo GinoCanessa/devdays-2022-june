@@ -1,30 +1,24 @@
 // Base URLs
-@baseUrlTFO = http://test.fhir.org/r4
-@baseUrlHapi = http://hapi.fhir.org/baseR4
-@baseUrlFirely = https://server.fire.ly/r4
-@baseUrlArgo = http://server.subscriptions.argo.run/r4
+@baseUrl = https://fhirdemo5.azurewebsites.net
 
-@patientIdArgo = CBZ8032
-@patientIdFirely = b426b062-8273-4b93-a907-de3176c0567d
-
+@patientId = 75014c51-5256-489a-ad1e-284740045d5a
 
 
 ### Search for Encounters with a subject
-GET {{baseUrlArgo}}/Encounter?subject={{patientIdArgo}}
+GET {{baseUrl}}/Encounter?subject={{patientId}}
 Accept: application/fhir+json
 
 ### Search for Encounters with a patient (different parameter)
-GET {{baseUrlArgo}}/Encounter?patient={{patientIdArgo}}
+GET {{baseUrl}}/Encounter?patient={{patientId}}
 Accept: application/fhir+json
 
 ### Search for Encounters with a subject that is a Patient resource
-GET {{baseUrlArgo}}/Encounter?subject:Patient={{patientIdArgo}}
+GET {{baseUrl}}/Encounter?subject:Patient={{patientId}}
 Accept: application/fhir+json
-
 
 
 ### Root Search with a common parameter
 # Encounter and Observation both have a `patient` search parameter
 # Patient does not, so is not returned
-GET {{baseUrlFirely}}/?patient={{patientIdFirely}}&_type=Patient,Encounter,Observation
+GET {{baseUrl}}/?patient={{patientId}}&_type=Patient,Encounter,Observation
 Accept: application/fhir+json
