@@ -17,7 +17,7 @@
 				],
 				"url": {
 					"raw": "https://fhirdemo5.azurewebsites.net/Patient?family:missing=true",
-					"protocol": "http",
+					"protocol": "https",
 					"host": [ "fhirdemo5", "azurewebsites", "net" ],
 					"path": [ "Patient" ],
 					"query": [
@@ -41,7 +41,7 @@
 				],
 				"url": {
 					"raw": "https://fhirdemo5.azurewebsites.net/Patient?family=Abernathy",
-					"protocol": "http",
+					"protocol": "https",
 					"host": [ "fhirdemo5", "azurewebsites", "net" ],
 					"path": [ "Patient" ],
 					"query": [
@@ -65,7 +65,7 @@
 				],
 				"url": {
 					"raw": "https://fhirdemo5.azurewebsites.net/Patient?family=524",
-					"protocol": "http",
+					"protocol": "https",
 					"host": [ "fhirdemo5", "azurewebsites", "net" ],
 					"path": [ "Patient" ],
 					"query": [
@@ -89,7 +89,7 @@
 				],
 				"url": {
 					"raw": "https://fhirdemo5.azurewebsites.net/Patient?family:contains=524",
-					"protocol": "http",
+					"protocol": "https",
 					"host": [ "fhirdemo5", "azurewebsites", "net" ],
 					"path": [ "Patient" ],
 					"query": [
@@ -113,7 +113,7 @@
 				],
 				"url": {
 					"raw": "https://fhirdemo5.azurewebsites.net/Patient?family:exact=abernathy524",
-					"protocol": "http",
+					"protocol": "https",
 					"host": [ "fhirdemo5", "azurewebsites", "net" ],
 					"path": [ "Patient" ],
 					"query": [
@@ -137,7 +137,7 @@
 				],
 				"url": {
 					"raw": "https://fhirdemo5.azurewebsites.net/Patient?family:exact=Abernathy524",
-					"protocol": "http",
+					"protocol": "https",
 					"host": [ "fhirdemo5", "azurewebsites", "net" ],
 					"path": [ "Patient" ],
 					"query": [

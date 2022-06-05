@@ -18,7 +18,7 @@
 				],
 				"url": {
 					"raw": "https://fhirdemo5.azurewebsites.net/Patient?birthdate=1998-01-27",
-					"protocol": "http",
+					"protocol": "https",
 					"host": [ "fhirdemo5", "azurewebsites", "net" ],
 					"path": [ "Patient" ],
 					"query": [
@@ -41,7 +41,7 @@
 				],
 				"url": {
 					"raw": "https://fhirdemo5.azurewebsites.net/Patient?birthdate=eq1998-01-27",
-					"protocol": "http",
+					"protocol": "https",
 					"host": [ "fhirdemo5", "azurewebsites", "net" ],
 					"path": [ "Patient" ],
 					"query": [
@@ -64,7 +64,7 @@
 				],
 				"url": {
 					"raw": "https://fhirdemo5.azurewebsites.net/Patient?birthdate=ne1998-01-27",
-					"protocol": "http",
+					"protocol": "https",
 					"host": [ "fhirdemo5", "azurewebsites", "net" ],
 					"path": [ "Patient" ],
 					"query": [
@@ -87,7 +87,7 @@
 				],
 				"url": {
 					"raw": "https://fhirdemo5.azurewebsites.net/Patient?birthdate=gt1998-01-27",
-					"protocol": "http",
+					"protocol": "https",
 					"host": [ "fhirdemo5", "azurewebsites", "net" ],
 					"path": [ "Patient" ],
 					"query": [
@@ -110,7 +110,7 @@
 				],
 				"url": {
 					"raw": "https://fhirdemo5.azurewebsites.net/Patient?birthdate=ge1998-01-27",
-					"protocol": "http",
+					"protocol": "https",
 					"host": [ "fhirdemo5", "azurewebsites", "net" ],
 					"path": [ "Patient" ],
 					"query": [
@@ -133,7 +133,7 @@
 				],
 				"url": {
 					"raw": "https://fhirdemo5.azurewebsites.net/Patient?birthdate=lt1998-01-27",
-					"protocol": "http",
+					"protocol": "https",
 					"host": [ "fhirdemo5", "azurewebsites", "net" ],
 					"path": [ "Patient" ],
 					"query": [
@@ -156,7 +156,7 @@
 				],
 				"url": {
 					"raw": "https://fhirdemo5.azurewebsites.net/Patient?birthdate=le1998-01-27",
-					"protocol": "http",
+					"protocol": "https",
 					"host": [ "fhirdemo5", "azurewebsites", "net" ],
 					"path": [ "Patient" ],
 					"query": [

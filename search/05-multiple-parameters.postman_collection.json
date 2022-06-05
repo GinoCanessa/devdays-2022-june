@@ -17,7 +17,7 @@
 				],
 				"url": {
 					"raw": "https://fhirdemo5.azurewebsites.net/Patient?family=abernathy&given=adrienne",
-					"protocol": "http",
+					"protocol": "https",
 					"host": [ "fhirdemo5", "azurewebsites", "net" ],
 					"path": [ "Patient" ],
 					"query": [
@@ -41,7 +41,7 @@
 				],
 				"url": {
 					"raw": "https://fhirdemo5.azurewebsites.net/Patient?family=abernathy&given:contains=302",
-					"protocol": "http",
+					"protocol": "https",
 					"host": [ "fhirdemo5", "azurewebsites", "net" ],
 					"path": [ "Patient" ],
 					"query": [
@@ -65,7 +65,7 @@
 				],
 				"url": {
 					"raw": "https://fhirdemo5.azurewebsites.net/Patient?family=abernathy,brito",
-					"protocol": "http",
+					"protocol": "https",
 					"host": [ "fhirdemo5", "azurewebsites", "net" ],
 					"path": [ "Patient" ],
 					"query": [
@@ -88,7 +88,7 @@
 				],
 				"url": {
 					"raw": "https://fhirdemo5.azurewebsites.net/Patient?family:exact=Abernathy524,brito",
-					"protocol": "http",
+					"protocol": "https",
 					"host": [ "fhirdemo5", "azurewebsites", "net" ],
 					"path": [ "Patient" ],
 					"query": [
@@ -111,7 +111,7 @@
 				],
 				"url": {
 					"raw": "https://fhirdemo5.azurewebsites.net/Patient?name=abernathy",
-					"protocol": "http",
+					"protocol": "https",
 					"host": [ "fhirdemo5", "azurewebsites", "net" ],
 					"path": [ "Patient" ],
 					"query": [
@@ -134,7 +134,7 @@
 				],
 				"url": {
 					"raw": "https://fhirdemo5.azurewebsites.net/Patient?name=adrienne",
-					"protocol": "http",
+					"protocol": "https",
 					"host": [ "fhirdemo5", "azurewebsites", "net" ],
 					"path": [ "Patient" ],
 					"query": [
@@ -157,7 +157,7 @@
 				],
 				"url": {
 					"raw": "https://fhirdemo5.azurewebsites.net/Patient?name=brito,adrienne",
-					"protocol": "http",
+					"protocol": "https",
 					"host": [ "fhirdemo5", "azurewebsites", "net" ],
 					"path": [ "Patient" ],
 					"query": [
@@ -180,7 +180,7 @@
 				],
 				"url": {
 					"raw": "https://fhirdemo5.azurewebsites.net/Patient?name:contains=302,172",
-					"protocol": "http",
+					"protocol": "https",
 					"host": [ "fhirdemo5", "azurewebsites", "net" ],
 					"path": [ "Patient" ],
 					"query": [

@@ -17,7 +17,7 @@
 				],
 				"url": {
 					"raw": "https://fhirdemo5.azurewebsites.net/Patient?_id=75014c51-5256-489a-ad1e-284740045d5a",
-					"protocol": "http",
+					"protocol": "https",
 					"host": [ "fhirdemo5", "azurewebsites", "net" ],
 					"path": [ "Patient" ],
 					"query": [
@@ -40,7 +40,7 @@
 				],
 				"url": {
 					"raw": "https://fhirdemo5.azurewebsites.net/Patient/75014c51-5256-489a-ad1e-284740045d5a",
-					"protocol": "http",
+					"protocol": "https",
 					"host": [ "fhirdemo5", "azurewebsites", "net" ],
 					"path": [ "Patient", "75014c51-5256-489a-ad1e-284740045d5a" ]
 				}
@@ -60,7 +60,7 @@
 				],
 				"url": {
 					"raw": "https://fhirdemo5.azurewebsites.net/Patient?family=Abernathy524",
-					"protocol": "http",
+					"protocol": "https",
 					"host": [ "fhirdemo5", "azurewebsites", "net" ],
 					"path": [ "Patient" ],
 					"query": [
@@ -94,7 +94,7 @@
 				},
 				"url": {
 					"raw": "https://fhirdemo5.azurewebsites.net/Patient/_search",
-					"protocol": "http",
+					"protocol": "https",
 					"host": [ "fhirdemo5", "azurewebsites", "net" ],
 					"path": [ "Patient", "_search" ]
 				}
@@ -114,7 +114,7 @@
 				],
 				"url": {
 					"raw": "https://fhirdemo5.azurewebsites.net/Patient?_sort=family",
-					"protocol": "http",
+					"protocol": "https",
 					"host": [ "fhirdemo5", "azurewebsites", "net" ],
 					"path": [ "Patient" ],
 					"query": [

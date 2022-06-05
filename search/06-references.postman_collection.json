@@ -17,7 +17,7 @@
 				],
 				"url": {
 					"raw": "https://fhirdemo5.azurewebsites.net/Encounter?subject=75014c51-5256-489a-ad1e-284740045d5a",
-					"protocol": "http",
+					"protocol": "https",
 					"host": [ "fhirdemo5", "azurewebsites", "net" ],
 					"path": [ "Encounter" ],
 					"query": [
@@ -40,7 +40,7 @@
 				],
 				"url": {
 					"raw": "https://fhirdemo5.azurewebsites.net/Encounter?patient=75014c51-5256-489a-ad1e-284740045d5a",
-					"protocol": "http",
+					"protocol": "https",
 					"host": [ "fhirdemo5", "azurewebsites", "net" ],
 					"path": [ "Encounter" ],
 					"query": [
@@ -63,7 +63,7 @@
 				],
 				"url": {
 					"raw": "https://fhirdemo5.azurewebsites.net/Encounter?subject:Patient=75014c51-5256-489a-ad1e-284740045d5a",
-					"protocol": "http",
+					"protocol": "https",
 					"host": [ "fhirdemo5", "azurewebsites", "net" ],
 					"path": [ "Encounter" ],
 					"query": [
@@ -87,7 +87,7 @@
 				],
 				"url": {
 					"raw": "https://fhirdemo5.azurewebsites.net/?patient=75014c51-5256-489a-ad1e-284740045d5a&_type=Patient,Encounter,Observation",
-					"protocol": "http",
+					"protocol": "https",
 					"host": [ "fhirdemo5", "azurewebsites", "net" ],
 					"path": [ ],
 					"query": [

@@ -17,7 +17,7 @@
 				],
 				"url": {
 					"raw": "https://fhirdemo5.azurewebsites.net",
-					"protocol": "http",
+					"protocol": "https",
 					"host": [ "fhirdemo5", "azurewebsites", "net" ],
 					"path": []
 				}
@@ -46,7 +46,7 @@
 				},
 				"url": {
 					"raw": "https://fhirdemo5.azurewebsites.net/_search",
-					"protocol": "http",
+					"protocol": "https",
 					"host": [ "fhirdemo5", "azurewebsites", "net" ],
 					"path": [ "_search" ]
 				}
@@ -66,7 +66,7 @@
 				],
 				"url": {
 					"raw": "https://fhirdemo5.azurewebsites.net/Patient",
-					"protocol": "http",
+					"protocol": "https",
 					"host": [ "fhirdemo5", "azurewebsites", "net" ],
 					"path": [ "Patient" ]
 				}
@@ -95,7 +95,7 @@
 				},
 				"url": {
 					"raw": "https://fhirdemo5.azurewebsites.net/Patient/_search",
-					"protocol": "http",
+					"protocol": "https",
 					"host": [ "fhirdemo5", "azurewebsites", "net" ],
 					"path": [ "Patient", "_search" ]
 				}
@@ -115,7 +115,7 @@
 				],
 				"url": {
 					"raw": "https://fhirdemo5.azurewebsites.net/Patient/75014c51-5256-489a-ad1e-284740045d5a",
-					"protocol": "http",
+					"protocol": "https",
 					"host": [ "fhirdemo5", "azurewebsites", "net" ],
 					"path": [ "Patient",  "75014c51-5256-489a-ad1e-284740045d5a" ]
 				}
@@ -144,7 +144,7 @@
 				},
 				"url": {
 					"raw": "https://fhirdemo5.azurewebsites.net/Patient/75014c51-5256-489a-ad1e-284740045d5a/Encounter/_search",
-					"protocol": "http",
+					"protocol": "https",
 					"host": [ "fhirdemo5", "azurewebsites", "net" ],
 					"path": [ "Patient", "75014c51-5256-489a-ad1e-284740045d5a", "Encounter", "_search" ]
 				}
