@@ -1,0 +1,102 @@
+{
+	"info": {
+		"name": "07-multiple-resources",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "encounter by patient name",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/fhir+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://fhirdemo5.azurewebsites.net/Encounter?subject.name=abernathy",
+					"protocol": "http",
+					"host": [ "fhirdemo5", "azurewebsites", "net" ],
+					"path": [ "Encounter" ],
+					"query": [
+						{ "key": "subject.name", "value": "abernathy"}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "patients with encounters",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/fhir+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://fhirdemo5.azurewebsites.net/Patient?_has:Encounter:patient:_id=75014c51-5256-489a-ad1e-284740045d5a",
+					"protocol": "http",
+					"host": [ "fhirdemo5", "azurewebsites", "net" ],
+					"path": [ "Patient" ],
+					"query": [
+						{ "key": "_has:Encounter:patient:_id", "value": "75014c51-5256-489a-ad1e-284740045d5a"}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "encounter include patients",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/fhir+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://fhirdemo5.azurewebsites.net/Encounter?_id=6400dc53-1495-4290-857e-84f58a7790e3&_include=Encounter:patient",
+					"protocol": "http",
+					"host": [ "fhirdemo5", "azurewebsites", "net" ],
+					"path": [ "Encounter" ],
+					"query": [
+						{ "key": "_id", "value": "6400dc53-1495-4290-857e-84f58a7790e3"},
+						{ "key": "_include", "value": "Encounter:patient"}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "patient reverse include encounters",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/fhir+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://fhirdemo5.azurewebsites.net/Patient?_id=75014c51-5256-489a-ad1e-284740045d5a&revinclude=Encounter:subject",
+					"protocol": "http",
+					"host": [ "fhirdemo5", "azurewebsites", "net" ],
+					"path": [ "Patient" ],
+					"query": [
+						{ "key": "_id", "value": "75014c51-5256-489a-ad1e-284740045d5a"},
+						{ "key": "_revinclude", "value": "Encounter:subject"}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

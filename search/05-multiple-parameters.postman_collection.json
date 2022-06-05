@@ -1,0 +1,194 @@
+{
+	"info": {
+		"name": "05-multiple-parameters",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "join with and",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/fhir+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://fhirdemo5.azurewebsites.net/Patient?family=abernathy&given=adrienne",
+					"protocol": "http",
+					"host": [ "fhirdemo5", "azurewebsites", "net" ],
+					"path": [ "Patient" ],
+					"query": [
+						{ "key": "family", "value": "abernathy"},
+						{ "key": "given", "value": "adrienne"}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "join with and with modifiers",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/fhir+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://fhirdemo5.azurewebsites.net/Patient?family=abernathy&given:contains=302",
+					"protocol": "http",
+					"host": [ "fhirdemo5", "azurewebsites", "net" ],
+					"path": [ "Patient" ],
+					"query": [
+						{ "key": "family", "value": "abernathy"},
+						{ "key": "given:contains", "value": "302"}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "join with or",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/fhir+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://fhirdemo5.azurewebsites.net/Patient?family=abernathy,brito",
+					"protocol": "http",
+					"host": [ "fhirdemo5", "azurewebsites", "net" ],
+					"path": [ "Patient" ],
+					"query": [
+						{ "key": "family", "value": "abernathy,brito"}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "join with or with modifiers",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/fhir+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://fhirdemo5.azurewebsites.net/Patient?family:exact=Abernathy524,brito",
+					"protocol": "http",
+					"host": [ "fhirdemo5", "azurewebsites", "net" ],
+					"path": [ "Patient" ],
+					"query": [
+						{ "key": "family:exact", "value": "Abernathy524,brito"}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "composite with family",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/fhir+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://fhirdemo5.azurewebsites.net/Patient?name=abernathy",
+					"protocol": "http",
+					"host": [ "fhirdemo5", "azurewebsites", "net" ],
+					"path": [ "Patient" ],
+					"query": [
+						{ "key": "name", "value": "abernathy"}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "composite with given",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/fhir+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://fhirdemo5.azurewebsites.net/Patient?name=adrienne",
+					"protocol": "http",
+					"host": [ "fhirdemo5", "azurewebsites", "net" ],
+					"path": [ "Patient" ],
+					"query": [
+						{ "key": "name", "value": "adrienne"}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "composite with or",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/fhir+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://fhirdemo5.azurewebsites.net/Patient?name=brito,adrienne",
+					"protocol": "http",
+					"host": [ "fhirdemo5", "azurewebsites", "net" ],
+					"path": [ "Patient" ],
+					"query": [
+						{ "key": "name", "value": "brito,adrienne"}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "composite with or with modifiers",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/fhir+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://fhirdemo5.azurewebsites.net/Patient?name:contains=302,172",
+					"protocol": "http",
+					"host": [ "fhirdemo5", "azurewebsites", "net" ],
+					"path": [ "Patient" ],
+					"query": [
+						{ "key": "name:contains", "value": "302,172"}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,170 @@
+{
+	"info": {
+		"name": "04-prefix-patient-birthdate",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "default",
+			"description": "Derfaults to equality testing",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/fhir+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://fhirdemo5.azurewebsites.net/Patient?birthdate=1998-01-27",
+					"protocol": "http",
+					"host": [ "fhirdemo5", "azurewebsites", "net" ],
+					"path": [ "Patient" ],
+					"query": [
+						{ "key": "birthdate", "value": "1998-01-27"}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "explicit equality",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/fhir+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://fhirdemo5.azurewebsites.net/Patient?birthdate=eq1998-01-27",
+					"protocol": "http",
+					"host": [ "fhirdemo5", "azurewebsites", "net" ],
+					"path": [ "Patient" ],
+					"query": [
+						{ "key": "birthdate", "value": "eq1998-01-27"}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "does not equal",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/fhir+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://fhirdemo5.azurewebsites.net/Patient?birthdate=ne1998-01-27",
+					"protocol": "http",
+					"host": [ "fhirdemo5", "azurewebsites", "net" ],
+					"path": [ "Patient" ],
+					"query": [
+						{ "key": "birthdate", "value": "ne1998-01-27"}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "greater than",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/fhir+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://fhirdemo5.azurewebsites.net/Patient?birthdate=gt1998-01-27",
+					"protocol": "http",
+					"host": [ "fhirdemo5", "azurewebsites", "net" ],
+					"path": [ "Patient" ],
+					"query": [
+						{ "key": "birthdate", "value": "gt1998-01-27"}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "greater than or equals",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/fhir+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://fhirdemo5.azurewebsites.net/Patient?birthdate=ge1998-01-27",
+					"protocol": "http",
+					"host": [ "fhirdemo5", "azurewebsites", "net" ],
+					"path": [ "Patient" ],
+					"query": [
+						{ "key": "birthdate", "value": "ge1998-01-27"}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "less than",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/fhir+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://fhirdemo5.azurewebsites.net/Patient?birthdate=lt1998-01-27",
+					"protocol": "http",
+					"host": [ "fhirdemo5", "azurewebsites", "net" ],
+					"path": [ "Patient" ],
+					"query": [
+						{ "key": "birthdate", "value": "lt1998-01-27"}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "less than or equals",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/fhir+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://fhirdemo5.azurewebsites.net/Patient?birthdate=le1998-01-27",
+					"protocol": "http",
+					"host": [ "fhirdemo5", "azurewebsites", "net" ],
+					"path": [ "Patient" ],
+					"query": [
+						{ "key": "birthdate", "value": "le1998-01-27"}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

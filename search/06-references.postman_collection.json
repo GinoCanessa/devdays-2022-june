@@ -1,0 +1,102 @@
+{
+	"info": {
+		"name": "06-references",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "encounter by subject",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/fhir+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://fhirdemo5.azurewebsites.net/Encounter?subject=75014c51-5256-489a-ad1e-284740045d5a",
+					"protocol": "http",
+					"host": [ "fhirdemo5", "azurewebsites", "net" ],
+					"path": [ "Encounter" ],
+					"query": [
+						{ "key": "subject", "value": "75014c51-5256-489a-ad1e-284740045d5a"}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "encounter by patient",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/fhir+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://fhirdemo5.azurewebsites.net/Encounter?patient=75014c51-5256-489a-ad1e-284740045d5a",
+					"protocol": "http",
+					"host": [ "fhirdemo5", "azurewebsites", "net" ],
+					"path": [ "Encounter" ],
+					"query": [
+						{ "key": "patient", "value": "75014c51-5256-489a-ad1e-284740045d5a"}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "encounter by subect resolve",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/fhir+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://fhirdemo5.azurewebsites.net/Encounter?subject:Patient=75014c51-5256-489a-ad1e-284740045d5a",
+					"protocol": "http",
+					"host": [ "fhirdemo5", "azurewebsites", "net" ],
+					"path": [ "Encounter" ],
+					"query": [
+						{ "key": "subject:Patient", "value": "75014c51-5256-489a-ad1e-284740045d5a"}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "root with common parameter",
+			"description": "Encounter and Observation both have a `patient` search parameter, patient does not so none are returned",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/fhir+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://fhirdemo5.azurewebsites.net/?patient=75014c51-5256-489a-ad1e-284740045d5a&_type=Patient,Encounter,Observation",
+					"protocol": "http",
+					"host": [ "fhirdemo5", "azurewebsites", "net" ],
+					"path": [ ],
+					"query": [
+						{ "key": "patient", "value": "75014c51-5256-489a-ad1e-284740045d5a"},
+						{ "key": "_type", "value": "Patient,Encounter,Observation"}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

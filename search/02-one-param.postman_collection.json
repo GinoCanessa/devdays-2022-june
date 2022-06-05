@@ -1,11 +1,11 @@
 {
 	"info": {
-		"name": "01-no-params",
+		"name": "02-one-param",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "root GET",
+			"name": "search by _id",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -16,94 +16,19 @@
 					}
 				],
 				"url": {
-					"raw": "https://fhirdemo5.azurewebsites.net",
+					"raw": "https://fhirdemo5.azurewebsites.net/Patient?_id=75014c51-5256-489a-ad1e-284740045d5a",
 					"protocol": "http",
 					"host": [ "fhirdemo5", "azurewebsites", "net" ],
-					"path": []
+					"path": [ "Patient" ],
+					"query": [
+						{ "key": "_id", "value": "75014c51-5256-489a-ad1e-284740045d5a"}
+					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "root POST",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Accept",
-						"value": "application/fhir+json",
-						"type": "text"
-					},
-					{
-						"key": "Content-Type",
-						"value": "application/x-www-form-urlencoded",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "urlencoded",
-					"urlencoded": []
-				},
-				"url": {
-					"raw": "https://fhirdemo5.azurewebsites.net/_search",
-					"protocol": "http",
-					"host": [ "fhirdemo5", "azurewebsites", "net" ],
-					"path": [ "_search" ]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "patient GET",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Accept",
-						"value": "application/fhir+json",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "https://fhirdemo5.azurewebsites.net/Patient",
-					"protocol": "http",
-					"host": [ "fhirdemo5", "azurewebsites", "net" ],
-					"path": [ "Patient" ]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "patient POST",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Accept",
-						"value": "application/fhir+json",
-						"type": "text"
-					},
-					{
-						"key": "Content-Type",
-						"value": "application/x-www-form-urlencoded",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "urlencoded",
-					"urlencoded": []
-				},
-				"url": {
-					"raw": "https://fhirdemo5.azurewebsites.net/Patient/_search",
-					"protocol": "http",
-					"host": [ "fhirdemo5", "azurewebsites", "net" ],
-					"path": [ "Patient", "_search" ]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "patient compartment GET",
+			"name": "read by id",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -117,13 +42,36 @@
 					"raw": "https://fhirdemo5.azurewebsites.net/Patient/75014c51-5256-489a-ad1e-284740045d5a",
 					"protocol": "http",
 					"host": [ "fhirdemo5", "azurewebsites", "net" ],
-					"path": [ "Patient",  "75014c51-5256-489a-ad1e-284740045d5a" ]
+					"path": [ "Patient", "75014c51-5256-489a-ad1e-284740045d5a" ]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "patient compartment POST",
+			"name": "search by patient family",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/fhir+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://fhirdemo5.azurewebsites.net/Patient?family=Abernathy524",
+					"protocol": "http",
+					"host": [ "fhirdemo5", "azurewebsites", "net" ],
+					"path": [ "Patient" ],
+					"query": [
+						{ "key": "family", "value": "Abernathy524" }
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search by patient family - POST",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -140,13 +88,38 @@
 				],
 				"body": {
 					"mode": "urlencoded",
-					"urlencoded": []
+					"urlencoded": [
+						{ "key": "family", "value": "Abernathy524" }
+					]
 				},
 				"url": {
-					"raw": "https://fhirdemo5.azurewebsites.net/Patient/75014c51-5256-489a-ad1e-284740045d5a/Encounter/_search",
+					"raw": "https://fhirdemo5.azurewebsites.net/Patient/_search",
 					"protocol": "http",
 					"host": [ "fhirdemo5", "azurewebsites", "net" ],
-					"path": [ "Patient", "75014c51-5256-489a-ad1e-284740045d5a", "Encounter", "_search" ]
+					"path": [ "Patient", "_search" ]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search by patient sort family",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/fhir+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://fhirdemo5.azurewebsites.net/Patient?_sort=family",
+					"protocol": "http",
+					"host": [ "fhirdemo5", "azurewebsites", "net" ],
+					"path": [ "Patient" ],
+					"query": [
+						{ "key": "_sort", "value": "family" }
+					]
 				}
 			},
 			"response": []

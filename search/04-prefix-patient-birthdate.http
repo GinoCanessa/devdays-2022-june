@@ -10,7 +10,7 @@ Accept: application/fhir+json
 GET {{baseUrl}}/Patient?birthdate=eq1998-01-27
 Accept: application/fhir+json
 
-### Not-equal: ne - prefix not supported
+### Not-equal: ne
 GET {{baseUrl}}/Patient?birthdate=ne1998-01-27
 Accept: application/fhir+json
 

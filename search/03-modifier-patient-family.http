@@ -17,7 +17,7 @@ GET {{baseUrl}}/Patient?family=524
 Accept: application/fhir+json
 
 
-### Contains: contains text, case-insensitive
+### Contains: contains or equals, case-insensitive
 GET {{baseUrl}}/Patient?family:contains=524
 Accept: application/fhir+json
 
