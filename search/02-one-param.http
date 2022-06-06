@@ -5,25 +5,25 @@
 @patientId = 75014c51-5256-489a-ad1e-284740045d5a
 
 
-### Global Search Parameter - _id - GET
+### 01-Global Search Parameter - _id - GET
 @name = SearchById
 GET {{baseUrl}}/Patient?_id={{patientId}}
 Accept: application/fhir+json
 
-### Comparison - Read with id
+### 02-Comparison - Read with id
 @name = ReadById
 GET {{baseUrl}}/Patient/{{patientId}}
 Accept: application/fhir+json
 
 
 
-### Resource Search Parameter - Patient:family - GET
+### 03-Resource Search Parameter - Patient:family - GET
 @name = SearchByPatientFamily
 GET {{baseUrl}}/Patient?family=Abernathy524
 Accept: application/fhir+json
 
 
-### Resource Search Parameter - Patient:family - POST
+### 04-Resource Search Parameter - Patient:family - POST
 @name = SearchByPatientFamilyPost
 GET {{baseUrl}}/Patient
 Accept: application/fhir+json
@@ -31,8 +31,8 @@ Content-Type: application/x-www-form-urlencoded
 
 family=Abernathy524
 
-### Search Result Parameter - _sort - GET
+### 05-Search Result Parameter - _sort - GET
 @name = SearchByPatientSortFamily
-GET {{{{baseUrl}}}}?_sort=family
+GET {{baseUrl}}/Patient?_sort=family
 Accept: application/fhir+json
 

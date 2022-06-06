@@ -4,25 +4,31 @@
 @patientId = 75014c51-5256-489a-ad1e-284740045d5a
 @encounterId = 6400dc53-1495-4290-857e-84f58a7790e3
 
+###
+GET {{baseUrl}}/Patient/75014c51-5256-489a-ad1e-284740045d5a
+Accept: application/fhir+json
 
-### Chain: Search for Encounters that reference a patient
+###
+GET {{baseUrl}}/Encounter?subject={{patientId}}
+
+### 01-Chain: Search for Encounters that reference a patient
 ### with a name
 GET {{baseUrl}}/Encounter?subject.name=Abernathy
 Accept: application/fhir+json
 
-### Reverse Chain: Search for Patients that have an Encounter,
+### 02-Reverse Chain: Search for Patients that have an Encounter,
 ### that references it via a `patient` search parameter 
 ### and have a specific id
-GET {{baseUrl}}/Patient?_has:Encounter:patient:_id={{patientId}}
+GET {{baseUrl}}/Patient?_has:Encounter:patient:subject={{patientId}}
 Accept: application/fhir+json
 
 
-### Include: search an encounter by ID and include the relevant patient
+### 03-Include: search an encounter by ID and include the relevant patient
 ### linked via the Encounter.patient search parameter
 GET {{baseUrl}}/Encounter?_id={{encounterId}}&_include=Encounter:patient
 Accept: application/fhir+json
 
-### Reverse Include: search a patient by ID and include all encounters
+### 04-Reverse Include: search a patient by ID and include all encounters
 ### linked via the Encounter.subject search parameter
 GET {{baseUrl}}/Patient?_id={{patientId}}&_revinclude=Encounter:subject
 Accept: application/fhir+json

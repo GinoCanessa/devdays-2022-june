@@ -1,0 +1,14 @@
+{
+  "resourceType": "Bundle",
+  "id": "7da5f0f6-e282-42d9-88f7-fc5326df9056",
+  "meta": {
+    "lastUpdated": "2022-06-06T18:40:30.7778809+00:00"
+  },
+  "type": "searchset",
+  "link": [
+    {
+      "relation": "self",
+      "url": "http://fhirdemo5.azurewebsites.net/Patient?family=524"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "resourceType": "Bundle",
+  "id": "6478c7a0-7423-425f-a320-e5d9e8d15c45",
+  "meta": {
+    "lastUpdated": "2022-06-06T18:41:13.1817978+00:00"
+  },
+  "type": "searchset",
+  "link": [
+    {
+      "relation": "self",
+      "url": "http://fhirdemo5.azurewebsites.net/Patient?family%3Aexact=abernathy524"
+    }
+  ]
+}

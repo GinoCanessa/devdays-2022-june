@@ -7,37 +7,36 @@
 // use an ID valid for that resource type on that server
 @patientId = 75014c51-5256-489a-ad1e-284740045d5a
 
-### Root Server Search - GET
+### 01-Root Server Search - GET 
 @name = RootServerGet
 GET {{baseUrl}}
 Accept: application/fhir+json
 
-### Root Server Search - POST
+### 02-Root Server Search - POST
 @name = RootServerPost
 POST {{baseUrl}}/_search
 Accept: application/fhir+json
 Content-Type: application/x-www-form-urlencoded
 
 
-### Resource Search - GET
+### 03-Resource Search - GET
 @name = ResourceGet
 GET {{baseUrl}}/{{resourceName}}
 Accept: application/fhir+json
 
-### Resource Search - POST
+### 04-Resource Search - POST
 @name = ResourcePost
 POST {{baseUrl}}/{{resourceName}}/_search
 Accept: application/fhir+json
 Content-Type: application/x-www-form-urlencoded
 
 
-### Compartment Search - GET
+### 05-Compartment Search - GET
 @name = CompartmentGet
 GET {{baseUrl}}/{{resourceName}}/{{patientId}}/Encounter
 Accept: application/fhir+json
 
-### Compartment Search - POST
-// note issue: not supported
+### 06-Compartment Search - POST
 @name = CompartmentPost
 POST {{baseUrl}}/{{resourceName}}/{{patientId}}/Encounter/_search
 Accept: application/fhir+json
